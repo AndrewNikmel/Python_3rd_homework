@@ -10,20 +10,20 @@
 
 
 
-import random
+# import random
 
-num = int(input("Введите количество элементов массива: "))
-array = []
-for i in range(num):
-    array.append (random.randint(0, 9))
-print(array)
-x = int(input("Введите число Х: "))
-amount = 0
-for i in range(len(array)):
-    if array[i] == x:
-        amount += 1
+# num = int(input("Введите количество элементов массива: "))
+# array = []
+# for i in range(num):
+#     array.append (random.randint(0, 9))
+# print(array)
+# x = int(input("Введите число Х: "))
+# amount = 0
+# for i in range(len(array)):
+#     if array[i] == x:
+#         amount += 1
    
-print(amount)
+# print(amount)
 
 
 
@@ -41,14 +41,26 @@ print(amount)
 #     -> 5
 
 #  хз, как найти приближенное число
+
+# import random
+
 # num = int(input("Введите количество элементов массива: "))
 # array = []
 # for i in range(num):
-#     array.append (i)
-# print(*array)
+#     array.append (random.randint(0, 9))
+# print(array)
+
 # x = int(input("Введите число: "))
+# similar = 0
 # for i in array:
-#     if
+#     if i == x-1:
+#         similar = i
+            
+# if similar == 0:
+#     print("заданному элементу Х не соответствует условие задачи")
+# else:
+#     print(f"самый близкий по величине элемент к '{x}' это '{similar}' ")
+
 
 
 
@@ -68,23 +80,30 @@ print(amount)
 # ноутбук
 #     12
 
-# корявый код
+t1 = ("A", "E", "I", "O", "U", "L", "N", "S", "T", "R", "А", "В", "Е", "И", "Н", "О", "Р", "С", "Т",)
+t2 = ("D", "G", "Д", "К", "Л", "М", "П", "У",)
+t3 = ("B", "C", "M", "P", "Б", "Г", "Ё", "Ь", "Я",)
+t4 = ("F", "H", "V", "W", "Y", "Й", "Ы",)
+t5 = ("K", "Ж", "З", "Х", "Ц", "Ч",)
+t8 = ("J", "X", "Ш", "Э", "Ю",)
+t10 = ("Q", "Z", "Ф", "Щ", "Ъ",)
 
-# word = str(input("Введите слово: "))
-# sum = 0
-# for i in word:
-#     if i == 'A' or i == 'E' or i == 'I' or i == 'O' or i == 'U' or i == 'L' or i == 'N' or i == 'S' or i == 'T' or i == 'R' or i == 'А' or i == 'В' or i == 'Е' or i == 'И' or i == 'Н' or i == 'О' or i == 'Р' or i == 'С' or i == 'Т':
-#         sum += 1
-#     elif i == 'D' or i == 'G' or i == 'Д' or i == 'К' or i == 'Л' or i == 'М' or i == 'П' or i == 'У':
-#         sum += 2
-#     elif i == 'B' or i == 'C' or i == 'M' or i == 'P' or i == 'Б' or i == 'Г' or i == 'Ё' or i == 'Ь' or i == 'Я':
-#         sum += 3
-#     elif i == 'F' or i == 'H' or i == 'V' or i == 'W' or i == 'Y' or i == 'Й' or i == 'Ы':
-#         sum += 4
-#     elif i == 'K' or i == 'Ж' or i == 'З' or i == 'Х' or i == 'Ц' or i == 'Ч':
-#         sum += 5
-#     elif i == 'J' or i == 'X' or i == 'Ш' or i == 'Э' or i == 'Ю':
-#         sum += 8
-#     else: #i == 'Q' or i == 'Z' or i == 'Ф' or i == 'Щ' or i == 'Ъ':
-#         sum += 10
-# print(sum)
+text = str(input("Введите слово: "))
+word = text.upper()
+counter = 0
+for i in word:
+    if i in t1:
+        counter += 1
+    elif i in t2:
+        counter += 2
+    elif i in t3:
+        counter += 3
+    elif i in t4:
+        counter += 4
+    elif i in t5: 
+        counter += 5
+    elif i in t8:
+        counter += 8
+    elif i in t10:
+        counter +=10
+print(counter)

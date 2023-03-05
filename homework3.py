@@ -10,21 +10,20 @@
 
 
 
-# ничего не ищет
-# num = int(input("Введите количество элементов массива: "))
-# array = []
-# for i in range(num):
-#     array.append (i)
-# print(*array)
-# x = int(input("Введите число Х: "))
-# amount = 0
-# for i in range(array):
-#     if array[i] == x:
-#         amount += 1
-#         if amount == 0:
-#             print(f"Число {x} не встречается в массиве")
-#         else:
-#             print(amount)
+import random
+
+num = int(input("Введите количество элементов массива: "))
+array = []
+for i in range(num):
+    array.append (random.randint(0, 9))
+print(array)
+x = int(input("Введите число Х: "))
+amount = 0
+for i in range(len(array)):
+    if array[i] == x:
+        amount += 1
+   
+print(amount)
 
 
 
